@@ -1,8 +1,8 @@
 # **Lab 1 Report**
 ---
+
 ## **1. Using the command 'cd' with no arguments**
 ![Image](cd_1.png)
-
 * The working directory was '/home' when the command 'cd' was run.
 * Using 'cd' without any arguments led to the home directory, a convenient way to return to the original directory within the file system.
 * The output is not an error.
