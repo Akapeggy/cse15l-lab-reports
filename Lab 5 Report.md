@@ -23,12 +23,13 @@
      Hi,
 
      It seems like there could be an issue with your loop logic in reversed(int[] arr).
-     Can you add debug prints inside the loop to show the value of arr[i] and
-     newArray[arr.length - i - 1] before and after the swap? This should help us
+     Can you add debug prints to the original array and the new array returned by calling the method reversed? This should help us
      see what's happening during each step of the reversal process.
   3. Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
      ![jdb](jdb.png)
-  4. At the end, all the information needed about the setup including:
+     Description of the bug: 
+     By using jdb, it turns out that the bug should be newArray[i] = arr[arr.length - i - 1] and return newArray instead of the original line 8 and 10.
+  5. At the end, all the information needed about the setup including:
      * The file & directory structure needed
        * My buggy program:
          ![ArrayExample](ArrayExample.png)
@@ -37,23 +38,25 @@
        * my script file:
          ![script](script.png)
        * directory:
-         -lab3
+         -lab3   
            -lib/
-             -hamcrest-core-1.3.jar
-             -junit-4.13.2.jar
-           -ArrayExamples.java
-           -ArrayTests.java
-           -test.sh
+               -hamcrest-core-1.3.jar   
+               -junit-4.13.2.jar   
+           -ArrayExamples.java   
+           -ArrayTests.java   
+           -test.sh   
      * The contents of each file before fixing the bug
        ![ArrayExample](ArrayExample.png)
      * The full command line (or lines) you ran to trigger the bug
        ![Symptom](Symptom.png)
      * A description of what to edit to fix the bug
        Instead of coding 'arr[i] = newArray[arr.length - i - 1];' in line 8, code 'newArray[i] = arr[arr.length - i - 1]'
+       Change return arr; in line 10 to return newArray;
  
 * ## **Part 2**
-  * Vim command
+    
     I’ve learned the Vim keybindings and commands for my code editor.Vim enables rapid editing tasks without relying on a mouse, 
     which streamlines my workflow.Additionally, its suitability for remote or SSH environments, where graphical editors mightnot be practical,
     is a significant advantage.Furthermore, mastering Vim has deepened my understanding of text editing and command-line interfaces,
     and this skills are crucial in many IT and development roles.
+    I’ve also learned that gdb is very helpful for remote debugging, a critical feature when diagnosing issues in distributed applications or server-based scenarios. Additionally, its ability to set breakpoints and watchpoints simplifies the process of tracking code flow and examining stack traces, making it easier to pinpoint and resolve issues.
