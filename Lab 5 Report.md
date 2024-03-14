@@ -24,7 +24,7 @@
 
      It seems like there could be an issue with your loop logic in reversed(int[] arr).
      Can you add debug prints inside the loop to show the value of arr[i] and
-     arr[arr.length - i - 1] before and after the swap at each iteration? This should help us
+     newArray[arr.length - i - 1] before and after the swap? This should help us
      see what's happening during each step of the reversal process.
   3. Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
      ![jdb](jdb.png)
